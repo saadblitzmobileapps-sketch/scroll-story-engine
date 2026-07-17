@@ -1,12 +1,26 @@
 import { useMutation } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { submitContact } from "@/lib/contact.functions";
 
 export function ContactForm() {
   const submit = useServerFn(submitContact);
   const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
   const [ok, setOk] = useState(false);
+
+  useEffect(() => {
+    try {
+      const svc = window.sessionStorage.getItem("mp:inquiry-service");
+      if (svc) {
+        setForm((f) =>
+          f.message
+            ? f
+            : { ...f, message: `I'd like to talk about: ${svc}.\n\n` }
+        );
+        window.sessionStorage.removeItem("mp:inquiry-service");
+      }
+    } catch {}
+  }, []);
 
   const mutation = useMutation({
     mutationFn: () =>

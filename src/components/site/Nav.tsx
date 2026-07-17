@@ -2,10 +2,9 @@ import { useEffect, useState } from "react";
 import logoAsset from "@/assets/logo.gif.asset.json";
 
 const links = [
-  { href: "#who", label: "About" },
   { href: "#services", label: "Services" },
-  { href: "#ai-completion", label: "AI Rescue" },
   { href: "#process", label: "Process" },
+  { href: "#partners", label: "Partners" },
   { href: "#contact", label: "Contact" },
 ];
 
