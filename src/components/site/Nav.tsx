@@ -36,15 +36,12 @@ export function Nav() {
               : "border border-transparent",
           ].join(" ")}
         >
-          <a href="#top" className="flex items-center gap-2.5">
+          <a href="#top" className="flex items-center" aria-label="Maintenance Planet — home">
             <img
               src={logoAsset.url}
               alt="Maintenance Planet"
-              className="h-8 w-auto"
+              className="h-9 w-auto"
             />
-            <span className="hidden text-sm font-semibold tracking-wide sm:inline">
-              Maintenance Planet
-            </span>
           </a>
         </div>
 
