@@ -2,10 +2,9 @@ import { useEffect, useState } from "react";
 import logoAsset from "@/assets/logo.gif.asset.json";
 
 const links = [
-  { href: "#who", label: "About" },
   { href: "#services", label: "Services" },
-  { href: "#ai-completion", label: "AI Rescue" },
   { href: "#process", label: "Process" },
+  { href: "#partners", label: "Partners" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -36,15 +35,12 @@ export function Nav() {
               : "border border-transparent",
           ].join(" ")}
         >
-          <a href="#top" className="flex items-center gap-2.5">
+          <a href="#top" className="flex items-center" aria-label="Maintenance Planet — home">
             <img
               src={logoAsset.url}
               alt="Maintenance Planet"
-              className="h-8 w-auto"
+              className="h-9 w-auto"
             />
-            <span className="hidden text-sm font-semibold tracking-wide sm:inline">
-              Maintenance Planet
-            </span>
           </a>
         </div>
 
