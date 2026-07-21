@@ -263,7 +263,7 @@ export function OrbitJourney() {
                       </span>
                       <span
                         className={[
-                          "mt-1.5 block whitespace-nowrap text-center text-[9px] uppercase tracking-[0.18em] transition-colors sm:mt-2 sm:text-[10px] sm:tracking-[0.2em]",
+                          "mt-1.5 hidden whitespace-nowrap text-center text-[9px] uppercase tracking-[0.18em] transition-colors sm:mt-2 sm:block sm:text-[10px] sm:tracking-[0.2em]",
                           isActive ? "text-foreground" : "text-muted-foreground",
                         ].join(" ")}
                       >
