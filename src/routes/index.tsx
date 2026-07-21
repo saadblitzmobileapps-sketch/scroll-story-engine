@@ -5,6 +5,7 @@ import { LoadingScreen } from "@/components/site/LoadingScreen";
 import { OrbitJourney } from "@/components/site/OrbitJourney";
 import { AgileProcess } from "@/components/site/AgileProcess";
 import { ContactForm } from "@/components/site/ContactForm";
+import logoAsset from "@/assets/logo.gif.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -126,10 +127,12 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="flex flex-col items-start justify-between gap-10 md:flex-row md:items-end">
           <div className="max-w-md">
-            <p className="text-2xl font-semibold">
-              <span className="text-gradient">Maintenance Planet</span>
-            </p>
-            <p className="mt-3 text-sm text-muted-foreground">
+            <img
+              src={logoAsset.url}
+              alt="Maintenance Planet"
+              className="h-16 w-auto sm:h-20"
+            />
+            <p className="mt-4 text-sm text-muted-foreground">
               Your true tech partner. Repair · Upgrade · Evolve — 24/7
               engineering for a world that never logs off.
             </p>

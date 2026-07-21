@@ -39,7 +39,7 @@ export function Nav() {
             <img
               src={logoAsset.url}
               alt="Maintenance Planet"
-              className="h-9 w-auto"
+              className="h-14 w-auto sm:h-16"
             />
           </a>
         </div>
