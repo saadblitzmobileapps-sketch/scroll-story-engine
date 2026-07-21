@@ -218,9 +218,9 @@ export function OrbitJourney() {
           }}
         />
 
-        <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-6 px-6 lg:grid-cols-[1.1fr_1fr]">
+        <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 px-4 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:gap-6">
           {/* ORBIT VISUAL */}
-          <div className="relative mx-auto flex aspect-square w-full max-w-[560px] items-center justify-center">
+          <div className="relative mx-auto flex aspect-square w-full max-w-[340px] items-center justify-center sm:max-w-[460px] lg:max-w-[560px]">
             {/* Rings */}
             <div className="absolute inset-0 rounded-full border border-hairline" />
             <div className="absolute inset-[10%] rounded-full border border-hairline" />
@@ -247,22 +247,23 @@ export function OrbitJourney() {
                     <span
                       className="block"
                       style={{
-                        transform: `translateY(-220px) rotate(${-angle - orbitRotation}deg)`,
+                        transform: `translateY(calc(-1 * min(220px, 40vw))) rotate(${-angle - orbitRotation}deg)`,
                       }}
                     >
                       <span
                         className={[
-                          "flex h-14 w-14 items-center justify-center rounded-2xl border transition-all duration-500",
+                          "flex h-10 w-10 items-center justify-center rounded-xl border transition-all duration-500 sm:h-12 sm:w-12 sm:rounded-2xl lg:h-14 lg:w-14",
                           isActive
                             ? "scale-110 border-electric bg-surface text-foreground shadow-[0_0_40px_-8px_oklch(0.72_0.18_235/0.9)]"
                             : "border-hairline bg-surface/70 text-muted-foreground backdrop-blur hover:border-electric hover:text-foreground",
                         ].join(" ")}
                       >
-                        <s.Icon size={22} />
+                        <s.Icon size={18} className="sm:hidden" />
+                        <s.Icon size={22} className="hidden sm:block" />
                       </span>
                       <span
                         className={[
-                          "mt-2 block whitespace-nowrap text-center text-[10px] uppercase tracking-[0.2em] transition-colors",
+                          "mt-1.5 hidden whitespace-nowrap text-center text-[9px] uppercase tracking-[0.18em] transition-colors sm:mt-2 sm:block sm:text-[10px] sm:tracking-[0.2em]",
                           isActive ? "text-foreground" : "text-muted-foreground",
                         ].join(" ")}
                       >
@@ -275,7 +276,7 @@ export function OrbitJourney() {
             </div>
 
             {/* Central planet */}
-            <div className="relative flex h-48 w-48 items-center justify-center sm:h-64 sm:w-64">
+            <div className="relative flex h-28 w-28 items-center justify-center sm:h-48 sm:w-48 lg:h-64 lg:w-64">
               <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,oklch(0.72_0.18_235/0.55),transparent_70%)] blur-2xl animate-pulse-glow" />
               <div
                 className="absolute inset-[-8%] rounded-full border border-hairline/60"
