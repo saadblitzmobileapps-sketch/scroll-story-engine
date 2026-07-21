@@ -5,6 +5,7 @@ import { LoadingScreen } from "@/components/site/LoadingScreen";
 import { OrbitJourney } from "@/components/site/OrbitJourney";
 import { AgileProcess } from "@/components/site/AgileProcess";
 import { ContactForm } from "@/components/site/ContactForm";
+import logoAsset from "@/assets/logo.gif.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Home,
