@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import logoAsset from "@/assets/logo.gif.asset.json";
+import planetImg from "@/assets/planet.png";
 import {
   Globe,
   Smartphone,
