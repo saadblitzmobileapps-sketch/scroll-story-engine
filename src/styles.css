@@ -187,11 +187,18 @@
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
 }
+@keyframes revolve-y {
+  0%   { transform: rotateY(-30deg); }
+  50%  { transform: rotateY(30deg); }
+  100% { transform: rotateY(-30deg); }
+}
 
 @utility animate-float-slow { animation: float-slow 7s ease-in-out infinite; }
 @utility animate-drift { animation: drift 14s ease-in-out infinite alternate; }
 @utility animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
 @utility animate-marquee { animation: marquee 40s linear infinite; }
+@utility animate-revolve { animation: revolve-y 18s ease-in-out infinite; }
+
 @utility text-shine {
   background: linear-gradient(90deg,
     oklch(0.98 0.005 240) 0%,

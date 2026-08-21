@@ -276,20 +276,27 @@ export function OrbitJourney() {
             </div>
 
             {/* Central planet */}
-            <div className="relative flex h-28 w-28 items-center justify-center sm:h-48 sm:w-48 lg:h-64 lg:w-64">
-              <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,oklch(0.72_0.18_235/0.55),transparent_70%)] blur-2xl animate-pulse-glow" />
-              <div
-                className="absolute inset-[-8%] rounded-full border border-hairline/60"
-                style={{ animation: "spin 40s linear infinite" }}
-              />
+          <div className="relative flex h-28 w-28 items-center justify-center sm:h-48 sm:w-48 lg:h-64 lg:w-64">
+            <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,oklch(0.72_0.18_235/0.55),transparent_70%)] blur-2xl animate-pulse-glow" />
+            <div
+              className="absolute inset-[-8%] rounded-full border border-hairline/60"
+              style={{ animation: "spin 40s linear infinite" }}
+            />
+            <div
+              className="relative z-10 h-full w-full animate-float-slow"
+              style={{ perspective: "900px" }}
+            >
               <img
                 src={planetImg}
                 alt="Maintenance Planet"
-                width={512}
-                height={512}
-                className="relative z-10 h-full w-full object-contain animate-float-slow drop-shadow-[0_0_40px_oklch(0.72_0.18_235/0.6)]"
+                width={1024}
+                height={1024}
+                className="h-full w-full object-contain animate-revolve drop-shadow-[0_0_40px_oklch(0.72_0.18_235/0.6)]"
+                style={{ transformStyle: "preserve-3d", backfaceVisibility: "visible" }}
               />
             </div>
+          </div>
+
           </div>
 
           {/* DETAIL PANEL */}
