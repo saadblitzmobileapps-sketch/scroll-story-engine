@@ -218,9 +218,9 @@ export function OrbitJourney() {
           }}
         />
 
-        <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 px-4 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:gap-6">
+        <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-6 px-4 pb-8 pt-24 sm:gap-8 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:gap-6 lg:py-0">
           {/* ORBIT VISUAL */}
-          <div className="relative mx-auto flex aspect-square w-full max-w-[340px] items-center justify-center sm:max-w-[460px] lg:max-w-[560px]">
+          <div className="relative mx-auto flex aspect-square w-full max-w-[290px] items-center justify-center sm:max-w-[460px] lg:max-w-[560px]">
             {/* Rings */}
             <div className="absolute inset-0 rounded-full border border-hairline" />
             <div className="absolute inset-[10%] rounded-full border border-hairline" />
