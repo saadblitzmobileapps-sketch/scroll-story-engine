@@ -76,6 +76,9 @@ export function ContactForm() {
         <Field label="Name" required>
           <input
             required
+            type="text"
+            name="name"
+            autoComplete="name"
             value={form.name}
             onChange={set("name")}
             maxLength={120}
@@ -87,6 +90,9 @@ export function ContactForm() {
           <input
             required
             type="email"
+            name="email"
+            autoComplete="email"
+            inputMode="email"
             value={form.email}
             onChange={set("email")}
             maxLength={255}
@@ -97,6 +103,9 @@ export function ContactForm() {
         <div className="sm:col-span-2">
           <Field label="Company">
             <input
+              type="text"
+              name="company"
+              autoComplete="organization"
               value={form.company}
               onChange={set("company")}
               maxLength={200}
