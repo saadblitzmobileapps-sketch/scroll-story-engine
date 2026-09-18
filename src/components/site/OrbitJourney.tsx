@@ -300,7 +300,7 @@ export function OrbitJourney() {
           </div>
 
           {/* DETAIL PANEL */}
-          <div className="relative min-h-[420px]">
+          <div className="relative min-h-[380px] sm:min-h-[420px]">
             {/* Intro card */}
             <div
               className={[
