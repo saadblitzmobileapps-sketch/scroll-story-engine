@@ -247,7 +247,7 @@ export function OrbitJourney() {
                     <span
                       className="block"
                       style={{
-                        transform: `translateY(calc(-1 * min(220px, 40vw))) rotate(${-angle - orbitRotation}deg)`,
+                        transform: `translateY(calc(-1 * min(220px, 31vw))) rotate(${-angle - orbitRotation}deg)`,
                       }}
                     >
                       <span
